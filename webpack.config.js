@@ -1,40 +1,32 @@
-const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const webpack = require("webpack");
+const path = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: ["./src/index.js", "./src/styles/main.scss"],
+  mode: 'development',
+  entry: './src/index.js',
+  devtool: 'inline-source-map',
+  plugins: [
+    new CleanWebpackPlugin(),
+  ],
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "./public/dist")
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
       {
-        test: /\.scss/,
-        loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader',
+        ],
       },
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: "eslint-loader",
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: "babel-loader"
-      }
-    ]
+    ],
   },
-  devServer: {
-    contentBase: "./public/",
-    watchContentBase: true
-  },
-  plugins: [
-    new ExtractTextPlugin("bundle.css"),
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify("production")
-    }),
-    new webpack.optimize.UglifyJsPlugin()
-  ]
 };
