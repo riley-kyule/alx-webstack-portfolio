@@ -1,34 +1,35 @@
 {
-  "name": "weather-forecast",
-  "version": "1.0.0",
-  "description": "ALX Final Project Webstack Portfolio",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
-    "build": "webpack"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/riley-kyule/alx-webstack-portfolio.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/riley-kyule/alx-webstack-portfolio/issues"
-  },
-  "homepage": "https://github.com/riley-kyule/alx-webstack-portfolio#readme",
-  "devDependencies": {
-    "@webpack-cli/serve": "^2.0.5",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.6.0",
-    "file-loader": "^6.0.0",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.12"
-  },
-  "dependencies": {
-    "places.js": "^1.19.0"
+    "name": "weather-forecast-app",
+    "version": "1.0.0",
+    "description": "ALX Final Websatck Portfolio Project 2024",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "watch": "webpack --watch",
+      "start": "webpack-dev-server --open",
+      "build": "webpack --mode production"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/riley-kyule/alx-webstack-portfolio.git"
+    },
+    "keywords": [],
+    "author": "Phillip Kyule",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/riley-kyule/alx-webstack-portfolio/issues"
+    },
+    "homepage": "https://github.com/riley-kyule/alx-webstack-portfolio#readme",
+    "devDependencies": {
+      "clean-webpack-plugin": "^3.0.0",
+      "css-loader": "^3.6.0",
+      "file-loader": "^6.0.0",
+      "style-loader": "^1.2.1",
+      "webpack": "^5.0.0",
+      "webpack-cli": "^4.7.0",
+      "@webpack-cli-serve": "^2.0.5"
+    },
+    "dependencies": {
+      "places.js": "^1.19.0"
+    }
   }
-}
