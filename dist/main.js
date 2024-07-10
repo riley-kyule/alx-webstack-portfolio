@@ -11232,7 +11232,7 @@
     
     "use strict";
     __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "025fab35f0783766510c70c14bac33b6.jpg");
+    /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "weather-bg.avif");
     
     }),
     
@@ -11245,7 +11245,7 @@
     
     "use strict";
     __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "6dc4a6844d690975a6189296f8cc54ee.jpg");
+    /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "forecast-page.webp");
     
     }),
     
