@@ -3,13 +3,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js', // Assuming this is your entry point for React
+  entry: './src/index.js', // This is my entry point for React
   devtool: 'inline-source-map',
   plugins: [
     new CleanWebpackPlugin(),
   ],
   output: {
-    filename: 'bundle.js', // Output bundle file name
+    filename: 'main.js', // Output bundle file name
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/', // Public path for assets
   },

@@ -1,7 +1,11 @@
 A web app that displays a 5-day weather forecast pulling data through the OpenWeather API.
 
 How to run the app
-Install via npm after cloning
+Option 1: Install via npm after cloning
+Option 2: Download and unzip, navigate to dist folder and open index.html
+
+Future Updates:
+Accurate Geolocation
 
 
 Stack Used
