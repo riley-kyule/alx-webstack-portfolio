@@ -9,9 +9,8 @@ Accurate Geolocation
 
 
 Stack Used
-React.js
-SASS
-Redux
-JavaScript ES6
-Jest & Enzyme
-HTML5
+HTML
+CSS & BOOTSTRAP
+JAVASCRIPT
+NPM
+WEBSTACK
