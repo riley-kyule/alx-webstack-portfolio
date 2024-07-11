@@ -11321,18 +11321,18 @@
     
       function fillCard(data) {
         Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('title', `${data.name}, ${data.sys.country}`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data.main.temp} Celsius`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data.main.feels_like} Celsius`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('desc', `<i class="fas fa-cloud-sun-rain text-warning my-2"></i> ${data.weather[0].main}`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('pressure', `<i class="fas fa-compress-arrows-alt text-warning my-2"></i> Pressure: ${data.main.pressure} hPa`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('humidity', `<i class="fas fa-percent text-warning my-2"></i> Humidity: ${data.main.humidity}%`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data.main.temp_min} Celsius`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data.main.temp_max} Celsius`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('wind', `<i class="fas fa-wind text-warning my-2"></i> ${data.wind.speed} meter/sec`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('windDir', `<i class="fas fa-compass text-warning my-2"></i> ${data.wind.deg} degrees`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('clouds', `<i class="fas fa-cloud text-warning my-2"></i> Clouds: ${data.clouds.all}%`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('sunrise', `<i class="fas fa-sun text-warning my-2"></i> Sunrise: ${new Date((data.sys.sunrise + data.timezone) * 1000).toUTCString().slice(-11, -7)} AM`);
-        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('sunset', `<i class="fas fa-sun text-warning my-2"></i> Sunset: ${new Date((data.sys.sunset + data.timezone) * 1000).toUTCString().slice(-11, -7)} PM`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data.main.temp} Celsius`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data.main.feels_like} Celsius`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('desc', `<i class="fas fa-cloud-sun-rain text-info my-2"></i> ${data.weather[0].main}`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('pressure', `<i class="fas fa-compress-arrows-alt text-info my-2"></i> Pressure: ${data.main.pressure} hPa`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('humidity', `<i class="fas fa-percent text-info my-2"></i> Humidity: ${data.main.humidity}%`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data.main.temp_min} Celsius`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data.main.temp_max} Celsius`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('wind', `<i class="fas fa-wind text-info my-2"></i> ${data.wind.speed} meter/sec`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('windDir', `<i class="fas fa-compass text-info my-2"></i> ${data.wind.deg} degrees`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('clouds', `<i class="fas fa-cloud text-info my-2"></i> Clouds: ${data.clouds.all}%`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('sunrise', `<i class="fas fa-sun text-info my-2"></i> Sunrise: ${new Date((data.sys.sunrise + data.timezone) * 1000).toUTCString().slice(-11, -7)} AM`);
+        Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('sunset', `<i class="fas fa-sun text-info my-2"></i> Sunset: ${new Date((data.sys.sunset + data.timezone) * 1000).toUTCString().slice(-11, -7)} PM`);
       }
     
       function imageSwitch(data, id) {
@@ -11383,21 +11383,21 @@
           imgBg.id = `images${index + 1}`;
           imgBg.style = 'background-size: cover;background-position-y: 100%;height: 75vh;';
           const over = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('div', 'card-img-overlay');
-          const h5 = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('h5', 'card-title text-center text-warning');
+          const h5 = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('h5', 'card-title text-center text-primary');
           h5.innerHTML = day.dt_txt.slice(0, -9);
           const listCont = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('div', 'd-flex flex-row justify-content-around');
           const ul1 = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('ul', 'list-group list-unstyled');
           const ul2 = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElement('ul', 'list-group list-unstyled');
-          const temp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${day.main.temp} Celsius`);
-          const feel = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${day.main.feels_like} Celsius`);
-          const pressure = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compress-arrows-alt text-warning my-2"></i> Pressure: ${day.main.pressure} hPa`);
-          const humidity = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-percent text-warning my-2"></i> Humidity: ${day.main.humidity}%`);
-          const desc = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud-sun-rain text-warning my-2"></i> ${day.weather[0].main}`);
-          const minTemp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${day.main.temp_min} Celsius`);
-          const maxTemp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${day.main.temp_max} Celsius`);
-          const clouds = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud text-warning my-2"></i> Clouds: ${day.clouds.all}%`);
-          const wind = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-wind text-warning my-2"></i> ${day.wind.speed} meter/sec`);
-          const windDir = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compass text-warning my-2"></i> ${day.wind.deg} degrees`);
+          const temp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${day.main.temp} Celsius`);
+          const feel = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${day.main.feels_like} Celsius`);
+          const pressure = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compress-arrows-alt text-info my-2"></i> Pressure: ${day.main.pressure} hPa`);
+          const humidity = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-percent text-info my-2"></i> Humidity: ${day.main.humidity}%`);
+          const desc = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud-sun-rain text-info my-2"></i> ${day.weather[0].main}`);
+          const minTemp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${day.main.temp_min} Celsius`);
+          const maxTemp = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${day.main.temp_max} Celsius`);
+          const clouds = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud text-info my-2"></i> Clouds: ${day.clouds.all}%`);
+          const wind = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-wind text-info my-2"></i> ${day.wind.speed} meter/sec`);
+          const windDir = Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compass text-info my-2"></i> ${day.wind.deg} degrees`);
           const color = document.getElementsByClassName('list-group-item');
     
           ul2.appendChild(minTemp);
@@ -11437,15 +11437,15 @@
       async function converter(data) {
         const data2 = await Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().getFahrenheit(data.name);
         if (document.getElementById('temp').innerHTML.includes(' Celsius')) {
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data2.main.temp} &#8457`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data2.main.feels_like} &#8457`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data2.main.temp_min} &#8457`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data2.main.temp_max} &#8457`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data2.main.temp} &#8457`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data2.main.feels_like} &#8457`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data2.main.temp_min} &#8457`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data2.main.temp_max} &#8457`);
         } else {
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data.main.temp} Celsius`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data.main.feels_like} Celsius`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data.main.temp_min} Celsius`);
-          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data.main.temp_max} Celsius`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data.main.temp} Celsius`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data.main.feels_like} Celsius`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data.main.temp_min} Celsius`);
+          Object(_helpers__WEBPACK_IMPORTED_MODULE_0__["default"])().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data.main.temp_max} Celsius`);
         }
       }
     
