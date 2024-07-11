@@ -23,18 +23,18 @@ const dom = function dom() {
 
   function fillCard(data) {
     helpers().addInnerText('title', `${data.name}, ${data.sys.country}`);
-    helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data.main.temp} Celsius`);
-    helpers().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data.main.feels_like} Celsius`);
-    helpers().addInnerText('desc', `<i class="fas fa-cloud-sun-rain text-warning my-2"></i> ${data.weather[0].main}`);
-    helpers().addInnerText('pressure', `<i class="fas fa-compress-arrows-alt text-warning my-2"></i> Pressure: ${data.main.pressure} hPa`);
-    helpers().addInnerText('humidity', `<i class="fas fa-percent text-warning my-2"></i> Humidity: ${data.main.humidity}%`);
-    helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data.main.temp_min} Celsius`);
-    helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data.main.temp_max} Celsius`);
-    helpers().addInnerText('wind', `<i class="fas fa-wind text-warning my-2"></i> ${data.wind.speed} meter/sec`);
-    helpers().addInnerText('windDir', `<i class="fas fa-compass text-warning my-2"></i> ${data.wind.deg} degrees`);
-    helpers().addInnerText('clouds', `<i class="fas fa-cloud text-warning my-2"></i> Clouds: ${data.clouds.all}%`);
-    helpers().addInnerText('sunrise', `<i class="fas fa-sun text-warning my-2"></i> Sunrise: ${new Date((data.sys.sunrise + data.timezone) * 1000).toUTCString().slice(-11, -7)} AM`);
-    helpers().addInnerText('sunset', `<i class="fas fa-sun text-warning my-2"></i> Sunset: ${new Date((data.sys.sunset + data.timezone) * 1000).toUTCString().slice(-11, -7)} PM`);
+    helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data.main.temp} Celsius`);
+    helpers().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data.main.feels_like} Celsius`);
+    helpers().addInnerText('desc', `<i class="fas fa-cloud-sun-rain text-info my-2"></i> ${data.weather[0].main}`);
+    helpers().addInnerText('pressure', `<i class="fas fa-compress-arrows-alt text-info my-2"></i> Pressure: ${data.main.pressure} hPa`);
+    helpers().addInnerText('humidity', `<i class="fas fa-percent text-info my-2"></i> Humidity: ${data.main.humidity}%`);
+    helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data.main.temp_min} Celsius`);
+    helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data.main.temp_max} Celsius`);
+    helpers().addInnerText('wind', `<i class="fas fa-wind text-info my-2"></i> ${data.wind.speed} meter/sec`);
+    helpers().addInnerText('windDir', `<i class="fas fa-compass text-info my-2"></i> ${data.wind.deg} degrees`);
+    helpers().addInnerText('clouds', `<i class="fas fa-cloud text-info my-2"></i> Clouds: ${data.clouds.all}%`);
+    helpers().addInnerText('sunrise', `<i class="fas fa-sun text-info my-2"></i> Sunrise: ${new Date((data.sys.sunrise + data.timezone) * 1000).toUTCString().slice(-11, -7)} AM`);
+    helpers().addInnerText('sunset', `<i class="fas fa-sun text-info my-2"></i> Sunset: ${new Date((data.sys.sunset + data.timezone) * 1000).toUTCString().slice(-11, -7)} PM`);
   }
 
   function imageSwitch(data, id) {
@@ -85,21 +85,21 @@ const dom = function dom() {
       imgBg.id = `images${index + 1}`;
       imgBg.style = 'background-size: cover;background-position-y: 100%;height: 75vh;';
       const over = helpers().createElement('div', 'card-img-overlay');
-      const h5 = helpers().createElement('h5', 'card-title text-center text-warning');
+      const h5 = helpers().createElement('h5', 'card-title text-center text-primary');
       h5.innerHTML = day.dt_txt.slice(0, -9);
       const listCont = helpers().createElement('div', 'd-flex flex-row justify-content-around');
       const ul1 = helpers().createElement('ul', 'list-group list-unstyled');
       const ul2 = helpers().createElement('ul', 'list-group list-unstyled');
-      const temp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${day.main.temp} Celsius`);
-      const feel = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${day.main.feels_like} Celsius`);
-      const pressure = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compress-arrows-alt text-warning my-2"></i> Pressure: ${day.main.pressure} hPa`);
-      const humidity = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-percent text-warning my-2"></i> Humidity: ${day.main.humidity}%`);
-      const desc = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud-sun-rain text-warning my-2"></i> ${day.weather[0].main}`);
-      const minTemp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${day.main.temp_min} Celsius`);
-      const maxTemp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${day.main.temp_max} Celsius`);
-      const clouds = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud text-warning my-2"></i> Clouds: ${day.clouds.all}%`);
-      const wind = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-wind text-warning my-2"></i> ${day.wind.speed} meter/sec`);
-      const windDir = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compass text-warning my-2"></i> ${day.wind.deg} degrees`);
+      const temp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${day.main.temp} Celsius`);
+      const feel = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${day.main.feels_like} Celsius`);
+      const pressure = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compress-arrows-alt text-info my-2"></i> Pressure: ${day.main.pressure} hPa`);
+      const humidity = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-percent text-info my-2"></i> Humidity: ${day.main.humidity}%`);
+      const desc = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud-sun-rain text-info my-2"></i> ${day.weather[0].main}`);
+      const minTemp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${day.main.temp_min} Celsius`);
+      const maxTemp = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${day.main.temp_max} Celsius`);
+      const clouds = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-cloud text-info my-2"></i> Clouds: ${day.clouds.all}%`);
+      const wind = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-wind text-info my-2"></i> ${day.wind.speed} meter/sec`);
+      const windDir = helpers().createElementWithInnerText('li', 'list-group-item', `<i class="fas fa-compass text-info my-2"></i> ${day.wind.deg} degrees`);
       const color = document.getElementsByClassName('list-group-item');
 
       ul2.appendChild(minTemp);
@@ -127,7 +127,7 @@ const dom = function dom() {
       row.appendChild(cont);
 
       for (let i = 0; i < color.length; i += 1) {
-        color[i].style = 'background-color: rgba(255,255,255,0.1);';
+        color[i].style = 'background-color: rgba(96, 151, 203, 0.1);';
       }
 
 
@@ -139,15 +139,15 @@ const dom = function dom() {
   async function converter(data) {
     const data2 = await helpers().getFahrenheit(data.name);
     if (document.getElementById('temp').innerHTML.includes(' Celsius')) {
-      helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data2.main.temp} &#8457`);
-      helpers().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data2.main.feels_like} &#8457`);
-      helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data2.main.temp_min} &#8457`);
-      helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data2.main.temp_max} &#8457`);
+      helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data2.main.temp} &#8457`);
+      helpers().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data2.main.feels_like} &#8457`);
+      helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data2.main.temp_min} &#8457`);
+      helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data2.main.temp_max} &#8457`);
     } else {
-      helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-warning my-2"></i> Temp: ${data.main.temp} Celsius`);
-      helpers().addInnerText('feel', `<i class="fas fa-meteor text-warning my-2"></i> Feel: ${data.main.feels_like} Celsius`);
-      helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-warning my-2"></i> Min: ${data.main.temp_min} Celsius`);
-      helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-warning my-2"></i> Max: ${data.main.temp_max} Celsius`);
+      helpers().addInnerText('temp', `<i class="fas fa-thermometer-half text-info my-2"></i> Temp: ${data.main.temp} Celsius`);
+      helpers().addInnerText('feel', `<i class="fas fa-meteor text-info my-2"></i> Feel: ${data.main.feels_like} Celsius`);
+      helpers().addInnerText('minTemp', `<i class="fas fa-temperature-low text-info my-2"></i> Min: ${data.main.temp_min} Celsius`);
+      helpers().addInnerText('maxTemp', `<i class="fas fa-temperature-high text-info my-2"></i> Max: ${data.main.temp_max} Celsius`);
     }
   }
 
