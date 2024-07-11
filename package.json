@@ -1,13 +1,12 @@
 {
-    "name": "weather-forecast-app",
+    "name": "horus-scope-weather-forecast-app",
     "version": "1.0.0",
     "description": "ALX Final Websatck Portfolio Project 2024",
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "watch": "webpack --watch",
-      "start": "webpack-dev-server --open",
-      "build": "webpack --mode production"
+      "build": "webpack"
     },
     "repository": {
       "type": "git",
@@ -15,7 +14,7 @@
     },
     "keywords": [],
     "author": "Phillip Kyule",
-    "license": "ISC",
+    "license": "UNLICENSED",
     "bugs": {
       "url": "https://github.com/riley-kyule/alx-webstack-portfolio/issues"
     },
